@@ -41,6 +41,7 @@
   />-->
 </meta></meta></meta></head>
 <body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -52,6 +53,9 @@
 <div data-md-component="announce">
 <aside class="md-banner">
 <div class="md-banner__inner md-grid md-typeset">
+<button aria-label="Don't show this again" class="md-banner__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
 <!-- Extra stylesing -->
 <style>
       .md-announce a,
@@ -72,6 +76,7 @@
 </p>
 </a>
 </div>
+<script>var content,el=document.querySelector("[data-md-component=announce]");el&&(content=el.querySelector(".md-typeset"),__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0))</script>
 </aside>
 </div>
 <div data-md-color-scheme="default" data-md-component="outdated" hidden="">
@@ -81,8 +86,9 @@
   You are not viewing the latest regular release.
   <a href="../../..">
 <strong>Click here to go to the latest regular release.</strong>
-</a>
-</div>
+</a> The <em>unreleased-development</em> release corresponds to the <em>main</em> branch of the repository.
+
+            </div>
 <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
 </aside>
 </div>
@@ -110,6 +116,20 @@
 </div>
 </div>
 </div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="(prefers-color-scheme)" data-md-color-primary="" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_3" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="" data-md-color-scheme="default" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to system preference" class="md-option" data-md-color-accent="cyan" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="light-blue" data-md-color-scheme="slate" id="__palette_3" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to system preference">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
 <label class="md-header__button md-icon" for="__search">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
 </label>
@@ -152,6 +172,14 @@
 </div>
 </nav>
 </header>
+<header class="md-header" data-md-component="header" style="z-index:-10;">
+<div class="md-header__inner md-grid" data-md-component="container">
+<p class="md_container" style="font-size:larger"> 
+	       KubeStellar has multiple documentation versions to match its multiple releases.<br/>
+	       Please make sure you are viewing the docs version which matches the release version of the code you are using!
+	       </p>
+</div>
+</header>
 <div class="md-container" data-md-component="container">
 <nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
 <div class="md-grid">
@@ -168,7 +196,7 @@
 </li>
 <li class="md-tabs__item">
 <a class="md-tabs__link" href="../get-started/">
-      Quick Start
+      Getting Started
     </a>
 </li>
 <li class="md-tabs__item">
@@ -288,7 +316,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../get-started/">
-        Quick Start
+        Getting Started
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
@@ -305,7 +333,34 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../user-guide-intro/">
+        Guide Overview
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../get-started/">
+        Getting Started
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          General Setup
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+          General Setup
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../setup-overview/">
         Overview
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../setup-limitations/">
+        Setup limitations
       </a>
 </li>
 <li class="md-nav__item">
@@ -313,6 +368,18 @@
         Prerequisites
       </a>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_4" id="__nav_4_3_4_label" tabindex="0">
+          KubeFlex Hosting cluster
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_3_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_4">
+<span class="md-nav__icon md-icon"></span>
+          KubeFlex Hosting cluster
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../acquire-hosting-cluster/">
         Acquire cluster for KubeFlex Hosting
@@ -323,6 +390,21 @@
         Initialize KubeFlex Hosting cluster
       </a>
 </li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_5" id="__nav_4_3_5_label" tabindex="0">
+          Core Spaces
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_3_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Core Spaces
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../its/">
         Inventory and Transport Spaces
@@ -333,9 +415,29 @@
         Workload Description Spaces
       </a>
 </li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../core-chart/">
+        Core Helm chart
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_3_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_7" id="__nav_4_3_7_label" tabindex="0">
+          Workload Execution Clusters
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_3_7_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_7">
+<span class="md-nav__icon md-icon"></span>
+          Workload Execution Clusters
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../wec/">
-        Workload Execution Clusters
+        About Workload Execution Clusters
       </a>
 </li>
 <li class="md-nav__item">
@@ -343,16 +445,39 @@
         Register a Workload Execution Cluster
       </a>
 </li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
-          Control
+<input class="md-nav__toggle md-toggle" id="__nav_4_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          Usage
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_4_9_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_4_9">
+<nav aria-expanded="false" aria-labelledby="__nav_4_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_4">
 <span class="md-nav__icon md-icon"></span>
-          Control
+          Usage
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../usage-limitations/">
+        Usage limitations
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_4_2" id="__nav_4_4_2_label" tabindex="0">
+          KubeStellar API
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_4_2">
+<span class="md-nav__icon md-icon"></span>
+          KubeStellar API
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -384,28 +509,18 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../core-chart/">
-        Core Helm chart
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../get-started/">
-        Quick Start
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../example-scenarios/">
         Example Scenarios
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4_13" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_13" id="__nav_4_13_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_4_4_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_4_4" id="__nav_4_4_4_label" tabindex="0">
           Third-party integrations
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_4_13_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_4_13">
+<nav aria-expanded="false" aria-labelledby="__nav_4_4_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_4_4">
 <span class="md-nav__icon md-icon"></span>
           Third-party integrations
         </label>
@@ -419,9 +534,12 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../best-practices/">
-        Best practices
+<a class="md-nav__link" href="../troubleshooting/">
+        Troubleshooting
       </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -483,11 +601,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../Contribution%20guidelines/operations/testing-doc-prs/">
         Testing website PRs
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Contribution%20guidelines/operations/all-macros/">
-        Listing of variables
       </a>
 </li>
 </ul>
@@ -724,12 +837,17 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../release-testing/">
-        Releaes Testing
+        Release Testing
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../Contribution%20guidelines/CONTRIBUTING/">
         Guidelines
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../pr-signoff/">
+        Sign-off on Contributions
       </a>
 </li>
 </ul>
@@ -1227,7 +1345,7 @@ controller-manager hosting the per-WDS controllers (<a href="../architecture/#bi
 <p>The image repository is <code>ghcr.io/kubestellar/kubestellar/controller-manager</code>.</p>
 <p>By our development practices and not doing any manual hacking we maintain the association that the container image tagged <code>$VERSION</code> is built from the Git commit having the Git tag <code>v$VERSION</code>.</p>
 <p>The <a href="../release/">release process</a> builds and publishes that container image.</p>
-<p><code>make ko-build-local</code> will make a local image for just the local
+<p><code>make ko-build-controller-manager-local</code> will make a local image for just the local
 platform. This is used in local testing.</p>
 <h3 id="clusteradm-container-image">clusteradm container image<a class="headerlink" href="#clusteradm-container-image" title="Permanent link">#</a></h3>
 <p>The kubestellar GitHub repository has a script,
@@ -1276,9 +1394,9 @@ it from local sources. This is not included in <code>make all-generated</code>.<
 the hosting cluster, once per WDS, and defines a <code>Job</code> that has two containers.
 One uses <a href="#helm-cli-container-image">the Helm CLI image</a> to instantiate <a href="#kubestellar-controller-manager-helm-chart">the KubeStellar controller-manager Helm chart</a>. The chart version appears as a literal in the PCH definition and is manually updated during the process of creating a release (see <a href="../release/">the release process document</a>). The other container uses the Helm CLI image to instantiate OCM Transport Helm chart. The version to instantiate appears as a literal in the PCH definition and is manually updated after each OTP release (see <a href="../release/#reacting-to-a-new-ocm-transport-plugin-release">the release process doc</a>).</p>
 <h3 id="scripts-and-instructions">Scripts and instructions<a class="headerlink" href="#scripts-and-instructions" title="Permanent link">#</a></h3>
-<p>There are instructions for using a release (the <a href="../get-started/">quickstart</a> document) and a setup script for end-to-end testing(<code>test/e2e/common/setup-kubestellar.sh</code>). The end-to-end testing can either test the local copy/version of the kubestellar repo or test a release. So there are three cases to consider.</p>
+<p>There are instructions for using a release (<a href="../get-started/">Getting Started</a> document) and a setup script for end-to-end testing(<code>test/e2e/common/setup-kubestellar.sh</code>). The end-to-end testing can either test the local copy/version of the kubestellar repo or test a release. So there are three cases to consider.</p>
 <h4 id="example-setup-instructions">Example setup instructions<a class="headerlink" href="#example-setup-instructions" title="Permanent link">#</a></h4>
-<p>There were two variants of the setup instructions for the examples: an older one --- which is out of service at the moment, is called "step-by-step", and uses the <code>ocm</code> and <code>kubestellar</code> PostCreateHooks --- and <a href="../get-started/">the quickstart</a>, which uses the <a href="#kubestellar-core-helm-chart">core Helm chart</a>. The latter is the preferred method, and is the only one described here.</p>
+<p>There were two variants of the setup instructions for the examples: an older one --- which is out of service at the moment, is called "step-by-step", and uses the <code>ocm</code> and <code>kubestellar</code> PostCreateHooks --- and <a href="../get-started/">Getting Started</a>, which uses the <a href="#kubestellar-core-helm-chart">core Helm chart</a>. The latter is the preferred method, and is the only one described here.</p>
 <p>The instructions are a Markdown file that displays commands for a user to execute. These start with commands that define environment variables that hold the release of ks/kubestellar and of ks/ocm-transport-plugin to use.</p>
 <p>The instructions display a command to instantiate the core Helm chart, at the version in the relevant environment variable, requesting the creation of one ITS and one WDS.</p>
 <p>The instructions display commands to update the user's kubeconfig file to have contexts for the ITS and the WDS created by the chart instance. These commands use the KubeFlex CLI (<code>kflex</code>). There is also a script under development that will do the job using <code>kubectl</code> instead of <code>kflex</code>; when it appears, the instructions will display a curl-to-bash command that fetches the script from GitHub using a version that appears as a literal in the instructions and gets manually updated as part of making a new release.</p>
@@ -1437,7 +1555,7 @@ keeping <code>main</code> always a working system?</p>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "navigation.indexes", "navigation.tabs", "navigation.path", "navigation.footer", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "navigation.indexes", "navigation.tabs", "navigation.path", "navigation.footer", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
 <script src="../../assets/javascripts/bundle.ce72ebac.min.js"></script>
 <script src="../../js/open_in_new_tab.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.0.2/dist/mermaid.esm.min.mjs";
